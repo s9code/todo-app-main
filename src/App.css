@@ -1,0 +1,37 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Variables */
+
+:root {
+
+    /* Colors */
+    --bright-blue:hsl(220, 98%, 61%);
+    --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    /* Light Theme */
+    --very-light-gray: hsl(0, 0%, 98%);
+    --very-light-grayish-blue: hsl(0, 0%, 98%);
+    --light-grayish-blue: hsl(236, 33%, 92%);
+    --dark-grayish-blue: hsl(233, 11%, 84%);
+    --very-dark-grayish-blue: hsl(235, 19%, 35%);
+    /* Dark Theme */
+    --very-dark-blue: hsl(235, 21%, 11%);
+    --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+    --light-grayish-blue: hsl(234, 39%, 85%);
+    --light-grayish-blue-hover: hsl(236, 33%, 92%);
+    --dark-grayish-blue: hsl(234, 11%, 52%);
+    --very-dark-grayish-blue: hsl(233, 14%, 35%);
+    --very-dark-grayish-blue-two:hsl(237, 14%, 26%);
+    /* Typography */
+    --body-copy: 18px;
+    --font-family: 'Josefin Sans', sans-serif;
+    --font-normal: 400;
+    --font-bold: 700;
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
