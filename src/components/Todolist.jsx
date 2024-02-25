@@ -2,16 +2,18 @@ import './todolist.css'
 import { useState } from 'react'
 import ImgWhite from '../../src/assets/bg-mobile-light.jpg'
 import ImgBlack from '../../src/assets/bg-mobile-dark.jpg'
+import Moon from '../../src/assets/icon-moon.svg'
+import Sun from '../../src/assets/icon-sun.svg'
 
 const Todolist = () => {
 
-    const [isWhite, setIsWhite] = useState(true);
+  const [isWhite, setIsWhite] = useState(true);
 
   function handleClick() {
     let bodyStyle = document.body.style;
 
     if (bodyStyle.backgroundColor === 'white') {
-      bodyStyle.backgroundColor = 'black';
+      bodyStyle.backgroundColor = 'hsl(235, 21%, 11%)';
       setIsWhite(false);
 
     } else {
@@ -19,7 +21,6 @@ const Todolist = () => {
       setIsWhite(true);
     }
   }
-  //const [index, setIndex] = useState(0);
 
   return (
     <section className='section'>
@@ -30,15 +31,19 @@ const Todolist = () => {
         <div className='container__section'>
           <div className="text-icon__container">
             <h1 className="container-text">T O D O</h1>
-            <button onClick={handleClick} className="container-icon"><img className='img-moon' src="../../src/assets/icon-moon.svg" alt="" /></button>
+            <button onClick={handleClick} className="container-icon"><img className='img-moon' src={isWhite ? Moon : Sun} alt="" /></button>
           </div>
           <div className="containter__new-todo container-form-style">
-            <input className='new-todo__input' placeholder="Create a new todo..." type="text" />
+            <input id={!isWhite ? "change" : ""} className='new-todo__input' placeholder="Create a new todo..." type="text" />
           </div>
-          <div className="containter__todo-boton">
-            <button className='boton-item'>All</button>
-            <button className='boton-item'>Active</button>
-            <button className='boton-item'>Completed</button>
+          <div id={!isWhite ? "change" : ""} className='containter__clear-todo'>
+            <button id={!isWhite ? "change" : ""} className='boton__clear-item'>Item?</button>
+            <button id={!isWhite ? "change" : ""} className='boton__clear-item'>Clear Complete</button>
+          </div>
+          <div id={!isWhite ? "change" : ""} className='containter__todo-boton'>
+            <button id={!isWhite ? "change" : ""} className='boton-item'>All</button>
+            <button id={!isWhite ? "change" : ""} className='boton-item'>Active</button>
+            <button id={!isWhite ? "change" : ""} className='boton-item'>Completed</button>
           </div>
           <div className="container__drag-drop">
             <p className='drag-drop'>Drag and drop to reader list</p>
